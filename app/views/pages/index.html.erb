@@ -1,0 +1,26 @@
+<h1>Pages</h1>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Type</th>
+      <th>Created at</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @pages.each do |page| %>
+      <tr>
+        <td><%= page.id %></td>
+        <td><%= link_to page.type, page_path(page) %></td>
+        <td><%= page.created_at %></td>
+        <td>
+          <%= link_to 'Edit', edit_page_path(page), :class => 'btn btn-mini' %>
+          <%= link_to 'Destroy', page_path(page), :method => :delete, :confirm => 'Are you sure?', :class => 'btn btn-mini btn-danger' %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to 'New', new_page_path, :class => 'btn btn-primary' %>

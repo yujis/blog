@@ -1,0 +1,150 @@
+<%= form_for @article, :html => { :class => 'form-horizontal' } do |f| %>
+  <fieldset>
+    <legend><%= controller.action_name.capitalize %> Article</legend>
+
+    <div class="control-group">
+      <%= f.label :type, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.text_field :type, :class => 'text_field' %>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <%= f.label :title, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.text_field :title, :class => 'text_field' %>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <%= f.label :author, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.text_field :author, :class => 'text_field' %>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <%= f.label :body, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.text_area :body, :class => 'text_area' %>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <%= f.label :extended, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.text_area :extended, :class => 'text_area' %>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <%= f.label :excerpt, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.text_area :excerpt, :class => 'text_area' %>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <%= f.label :user_id, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.number_field :user_id, :class => 'number_field' %>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <%= f.label :permalink, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.text_field :permalink, :class => 'text_field' %>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <%= f.label :guid, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.text_field :guid, :class => 'text_field' %>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <%= f.label :text_filter_id, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.number_field :text_filter_id, :class => 'number_field' %>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <%= f.label :whiteboard, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.text_area :whiteboard, :class => 'text_area' %>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <%= f.label :name, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.text_field :name, :class => 'text_field' %>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <%= f.label :published, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.check_box :published, :class => 'check_box' %>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <%= f.label :allow_pings, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.check_box :allow_pings, :class => 'check_box' %>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <%= f.label :allow_comments, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.check_box :allow_comments, :class => 'check_box' %>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <%= f.label :published_at, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.datetime_select :published_at, :class => 'datetime_select' %>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <%= f.label :state, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.text_field :state, :class => 'text_field' %>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <%= f.label :parent_id, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.number_field :parent_id, :class => 'number_field' %>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <%= f.label :settings, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.text_area :settings, :class => 'text_area' %>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <%= f.label :post_type, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.text_field :post_type, :class => 'text_field' %>
+      </div>
+    </div>
+
+    <div class="form-actions">
+      <%= f.submit nil, :class => 'btn btn-primary' %>
+      <%= link_to 'Cancel', articles_path, :class => 'btn' %>
+    </div>
+  </fieldset>
+<% end %>

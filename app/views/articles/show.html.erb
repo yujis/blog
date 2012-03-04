@@ -1,0 +1,39 @@
+<h1><%= @article.title %></h1>
+
+<p>
+  <%= @article.body %>
+</p>
+
+  <div class='meta'>
+    <p>
+      <small>Published on
+        <%= @article.created_at.to_date %>
+        .
+        Tags 
+        <% for tag in @article.tags %>
+        <a href="<%= article_by_tag_path(tag) %>" rel="tag"><%= tag.name %></a>
+        <% end %>
+      </small>
+      </p>
+    </div>
+
+    <h3 class="feedback" id="commentaires">
+      <%= @article.comments.count %> comment &raquo;
+    </h3>
+    <ul id="commentList" class="unstyled">
+
+<% for comment in @article.comments %>
+  <li id="comment-1">
+  <h4>
+    By <%= comment.name %>
+    <%= comment.created_at.to_date %>
+  </h4>
+    <p><%= comment.comment %></p>
+  <hr />
+</li>
+<% end %>
+
+</ul>
+
+    <%= render 'comments/form' %>
+

@@ -1,0 +1,22 @@
+<h1>Tags</h1>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Articles</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @tags.each do |tag| %>
+      <tr>
+        <td><%= link_to tag.name, article_by_tag_path(tag) %></td>
+        <td><%= tag.taggings.size %></td>
+        <td>
+          <%= link_to 'Edit', {:action => 'edit', :id => tag.id}, :class => 'btn btn-mini' %>
+          <%= link_to 'Destroy', {:action => 'destroy', :id => tag.id}, :method => :delete, :confirm => 'Are you sure?', :class => 'btn btn-mini btn-danger' %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+

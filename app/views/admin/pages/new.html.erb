@@ -1,0 +1,3 @@
+<%= form_for @page, :url =>{ :action => 'create'}, :html => { :class => 'form-horizontal' } do |f| %>
+<%= render :partial => 'form', :locals => {:f => f} %>
+<% end %>

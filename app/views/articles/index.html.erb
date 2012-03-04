@@ -1,0 +1,12 @@
+    <% @articles.each_with_index do |article, index| %>
+            <div class="span4">
+              <h2><%= article.title %></h2>
+              <p><%= article.excerpt %></p>
+              <p><%= link_to 'View details >>', article, :class => 'btn' %></p>
+            </div><!--/span-->
+    <% if index % 3 == 2 %>
+          </div><!--/row-->
+          <div class="row-fluid">
+    <% end %>
+    <% end %>
+
